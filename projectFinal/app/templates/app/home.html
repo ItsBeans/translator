@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Translator</h1>
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-5">
+               <div class="form-group">
+                    <select class="form-control mb-3" name="language_from">
+                        <option value="en" {% if language_from == 'en' %}selected{% endif %}>English</option>
+                        <option value="es" {% if language_from == 'es' %}selected{% endif %}>Spanish</option>
+                        
+                    </select>
+                    <textarea class="form-control" name="text_to_translate" rows="8" placeholder="Enter text"></textarea>
+                </div>
+
+            </div>
+            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                <button type="submit" class="btn btn-primary">Translate</button>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <select class="form-control mb-3" name="language_to">
+                        <option value="es" {% if language_to == 'es' %}selected{% endif %}>Spanish</option>
+                        <option value="en" {% if language_to == 'en' %}selected{% endif %}>English</option>
+                       
+                    </select>
+                    <textarea class="form-control" name="translated_text" rows="8" readonly>{{ translated_text }}</textarea>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <h2>{{ request.user.username }}'s Translation history</h2>
+    <h3>Past Translations</h3>
+    <ul>
+        {% for translation in translations %}
+            <li> Original text:  {{translation.original_text}} --- translated text:  {{ translation.translated_text }} - Translated on {{ translation.created_at }}</li>
+        {% empty %}
+            <li>No past translations found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
