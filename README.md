@@ -9,7 +9,6 @@ Open the directory in which you have downloaded the files in.  For example by do
 cd downloads
 cd projectFinal
 
-
 Run the following commands in order:
 
 pip install -r requirements.txt 
@@ -24,8 +23,3 @@ Now you have access to the web application
 
 ______________________________
 
-The 'notebooks'  folder is not needed for the web application but holds the jupyter notebooks used when evaluating the 
-accuracy of the models with the 2 test data sets, aswell as also evaluating their inference time. It also
-includes the notebook for fine-tuning the existing models, using the trainer API from hugging face to do so. 
-The same notebook was used for the different models and also adapted for different datasets as data processing had to be done 
-differently with each one.
