@@ -1,25 +1,51 @@
-To run the web application from the file.
+# Web Application Setup Guide
 
-Ensure you have python already downloaded, python 3.9.0 was used for this project.
+This guide will help you run the web application locally.
 
-Open the command prompt on your computer.
+## Prerequisites
 
-Open the directory in which you have downloaded the files in.  For example by doing:
+- Python 3.9.0 (or compatible version) installed
+- `pip` (Python package manager)
 
-cd downloads
-cd projectFinal
+## Getting Started
 
-Run the following commands in order:
+1. **Open your terminal or command prompt.**
 
-pip install -r requirements.txt 
-python manage.py migrate 
-python manage.py runserver
+2. **Navigate to the directory where the project files are located.**  
+   For example:
 
-Then it will tell you the link for the local host of the website, copy this into a browser of your choice. 
+   ```bash
+   cd Downloads
+   cd projectFinal
+   ```
 
-The link should be http://127.0.0.1:8000/
+3. **Install project dependencies:**
 
-Now you have access to the web application
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-______________________________
+4. **Apply database migrations:**
+
+   ```bash
+   python manage.py migrate
+   ```
+
+5. **Run the development server:**
+
+   ```bash
+   python manage.py runserver
+   ```
+
+6. **Access the application:**
+
+   Once the server is running, open your browser and visit:  
+   [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+   You should now have access to the web application locally.
+
+## Notes
+
+- Make sure all required files are in the same directory.
+- If you encounter any issues, check your Python version or virtual environment setup.
 
